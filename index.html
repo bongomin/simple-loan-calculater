@@ -5,75 +5,83 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 <link rel="stylesheet" href="style.css">
   </head>
-  <body style="background:black;">
+  <body>
     <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-6 col-lg-6 col-sm-12">
-        <div class="col-md-10 mx-auto" style="box-shadow: 0 1px 5px rgba(245, 13, 13, 0.46);margin: px;
-      ">
-          <div class="card card-body text-center mt-5" style="margin:40px; background: black; color:red;">
-            <h1 class="heading display-5 pb-3"> Loan Calculator <br/> <small style="font-size:14px; color:blue;">Designed By
-                Bongomin Daniel</small></h1>
-                <hr>
-            <form id="loan-form">
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-addon">$</span>
-                  <input type="number" step="any" class="form-control" id="amount" placeholder="Loan Amount in Dollars">
+      <div class="card m-4">
+        <div class="card-header "> <i class="fa fa-address-card" style="font-size:30px"></i>  Loan Calculater</div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6 col-lg-6 col-sm-12">
+                  <div class="col-md-10 mx-auto">
+                    <div class="card card-body text-center">
+                      <form id="loan-form">
+                        <div class="form-group">
+                          <div class="input-group">
+                            <span class="input-group-addon">$</span>
+                            <input type="number" step="any" class="form-control" id="amount" placeholder="Loan Amount in Dollars">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="input-group">
+                            <span class="input-group-addon">%</span>
+                            <input type="number" step="any" class="form-control" id="interest" placeholder="Interest in percentage ">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <input type="number" step="any" class="form-control" id="years" placeholder="Repayment Period in Years">
+                        </div>
+                        <div class="form-group">
+                          <input type="submit" value="Calculate" class="btn  btn-block" style="width:50%;">
+                        </div>
+                      </form>
+                      <!-- LOADER HERE -->
+                      <div id="loading">
+                        <img src="img/loading.gif" class="img-responsive"alt="Loading" style="height:300px; ">
+                      </div>
+                      <!-- RESULTS -->
+                      <div id="results" class="pt-4">
+                        <h5>Results</h5>
+                        <div class="form-group">
+                          <div class="input-group">
+                            <span class="input-group-addon">Monthly Payment</span>
+                            <input type="number" class="form-control" id="monthly-payment" disabled>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="input-group">
+                            <span class="input-group-addon">Total Payment</span>
+                            <input type="number" class="form-control" id="total-payment" disabled>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="input-group">
+                            <span class="input-group-addon">Total Interest</span>
+                            <input type="number" class="form-control" id="total-interest" disabled>
+                          </div>
+                        </div>
+                      </div><!-- results -->
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-addon">%</span>
-                  <input type="number" step="any" class="form-control" id="interest" placeholder="Interest in percentage ">
+                <div class="col-md-6 col-lg-6 col-hidden-sm" >
+                <div class="img-wrapper">
+                <img src="img/loan-calculator.jpg"/>
                 </div>
-              </div>
-              <div class="form-group">
-                <input type="number" step="any" class="form-control" id="years" placeholder="Repayment Period in Years">
-              </div>
-              <div class="form-group">
-                <input type="submit" value="Calculate" class="btn  btn-block" style="width:50%;">
-              </div>
-            </form>
-            <!-- LOADER HERE -->
-            <div id="loading">
-              <img src="img/loading.gif" alt="Loading">
-            </div>
-            <!-- RESULTS -->
-            <div id="results" class="pt-4">
-              <h5>Results</h5>
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-addon">Monthly Payment</span>
-                  <input type="number" class="form-control" id="monthly-payment" disabled>
                 </div>
-              </div>
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-addon">Total Payment</span>
-                  <input type="number" class="form-control" id="total-payment" disabled>
                 </div>
-              </div>
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-addon">Total Interest</span>
-                  <input type="number" class="form-control" id="total-interest" disabled>
-                </div>
-              </div>
-            </div><!-- results -->
-          </div>
+        </div>
+        <div class="card-footer">
+          <small>  Copy Right @ bongomin daniel</small>
+         
         </div>
       </div>
-      <div class="col-md-6 col-lg-6 col-hidden-sm" style="">
-      <div class="img-wrapper">
-      <img src="img/graph_bg.png"/>
-      </div>
-      </div>
+    
       </div>
 
     <!-- Optional JavaScript -->
